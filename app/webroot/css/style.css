@@ -1,0 +1,75 @@
+.header-one {
+	width: 100%;
+	height: 4px;
+	background-color: #000;
+}
+
+.header-two {
+	width: 100%;
+	height: 4px;
+	background-color: #ddd;
+}
+
+.logo{
+	padding: 3%;
+}
+
+.top-nav li{
+	float: left;
+	list-style: none;
+	margin-right: 3%;
+}
+
+.abd-btn{
+	background-color: #ccc !important;
+	color: #000;
+	text-shadow: 1px 2px #fff;
+}
+
+.slogan {
+	color: #7c7c7c;
+	font-size: 12px;
+	padding: 5px 0px 0px 0px;
+	cursor: default;
+}
+
+.slogan:hover{
+	text-decoration: none;
+}
+
+.search-box{
+	padding: 3%;
+	background: #d7d7d7;
+	border-radius: 5px;
+	box-shadow: 5px 5px #f2f2f2;
+}
+
+.tab-content{
+	margin-left: 1px;
+}
+
+.tab-pane {
+	background: white;
+	padding: 1%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.front-text {
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+.homepage-text{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 2px dotted #BDBDBD;
+	border-radius: 3px;
+	color: #2A2A2A;
+	padding: 5px;
+	font-size: 19px;
+}
+
+.homepage-images .col-md-3{
+	padding-bottom: 20px;
+}
