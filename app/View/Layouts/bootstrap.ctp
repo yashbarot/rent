@@ -24,6 +24,8 @@
   <?php
     echo $this->fetch('meta');
     echo $this->fetch('css');
+    echo $this->Html->css('style.css');
+    echo $this->Html->css('bootstrap.min.css');
     echo $this->fetch('script');  
   ?>
   </head>

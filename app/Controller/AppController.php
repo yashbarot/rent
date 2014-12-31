@@ -31,9 +31,14 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	
-	public function beforeFilter() {
-        $this->layout = 'bootstrap';
+	public $components = array(
+        'Session',
+        'RequestHandler',
+    );
+
+    public function beforeFilter() {
+         $this->layout = 'bootstrap';
         parent::beforeFilter();
-    }    
+
+    }
 }
