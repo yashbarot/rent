@@ -53,11 +53,13 @@
 						<td><?php echo h($property['Property']['construction_style']); ?>&nbsp;</td>
 						<td><?php echo h($property['Property']['photo']); ?>&nbsp;</td>
 						<td><?php echo h($property['Property']['remarks']); ?>&nbsp;</td>
+						<?php  if (Auth::hasRoles(array('user')) ) { ?>
 						<td class="actions">
 							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $property['Property']['id']), array('escape' => false)); ?>
 							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $property['Property']['id']), array('escape' => false)); ?>
 							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $property['Property']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $property['Property']['id'])); ?>
 						</td>
+						<?php } ?>
 					</tr>
 				<?php endforeach; ?>
 				</tbody>

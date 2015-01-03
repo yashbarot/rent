@@ -13,13 +13,32 @@
           <ul class="top-nav">
             <li><span class="btn btn-default abd-btn" disabled>AHMEDABAD</span></li>
             <li>
-<?php echo $this->Html->image('post.png'); ?>
+        <?php echo $this->Html->image('post.png'); ?>
             </li>
             <li><a class="slogan" href="#">WE MAKE YOUR HOME SEARCH EASY</a></li>
             <li><i class="glyphicon glyphicon-earphone"></i>1234567899</li>
             <li><a href="#">FAQs</a></li>
+        <?php  if (Auth::hasRoles(array('user')) ) { ?>
             <li><a href="#"><?php echo $this->Html->link(__('Properties'), array('controller' => 'properties','action' => 'index'), array('escape' => false)); ?></a></li>
             <li><a href="#"><?php echo $this->Html->link(__('Add Property'), array('controller' => 'properties','action' => 'add'), array('escape' => false)); ?></a></li>
+            
+        <li>
+
+         <?php echo $this->Html->link('Logout',[
+            'controller' => 'users' ,
+            'action'=>'logout', 
+         ]); ?>
+      </li>
+      <?php }else{ ?>
+        <li>
+
+         <?php echo $this->Html->link('Login',[
+            'controller' => 'users' ,
+            'action'=>'login', 
+         ]); ?>
+      </li>
+      <li><a href="#"><?php echo $this->Html->link(__('Properties'), array('controller' => 'properties','action' => 'index'), array('escape' => false)); ?></a></li>
+<?php } ?>
           </ul>
         </div>
       </div>

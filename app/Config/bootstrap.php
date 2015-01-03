@@ -113,3 +113,4 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load('Tools',array('bootstrap' => true,'routes' => false));
+App::uses('Auth', 'Tools.Lib');

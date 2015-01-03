@@ -23,9 +23,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function dashboard() {
-        $fullname = $this->Auth->user('fullname');
-        $modified = $this->Auth->user('modified');
-        $this->set(compact('fullname','modified'));
+        
 	}
 
 /**

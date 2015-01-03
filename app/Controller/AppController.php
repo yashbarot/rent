@@ -34,11 +34,32 @@ class AppController extends Controller {
 	public $components = array(
         'Session',
         'RequestHandler',
+        'Auth' => array(
+            'loginRedirect' => array(
+                'controller' => 'users',
+                'action' => 'dashboard'
+            ),
+            'logoutRedirect' => array(
+                'controller' => 'users',
+                'action' => 'login'
+            ),
+            'authenticate' => array(
+                      'Form' => array(
+                            'contain' => array('Role'),
+                            'recursive'=> 1,
+                        )
+            ),
+            'unauthorizedRedirect'=>array(
+                'controller' => 'users',
+                'action' => 'dashboard'
+            ),
+           //'authorize' => ['Tools.Tiny']
+        ),
     );
 
     public function beforeFilter() {
-         $this->layout = 'bootstrap';
+        $this->layout = 'bootstrap';
         parent::beforeFilter();
-
+        $this->Auth->allow('login','lost_password','change_password_init','change_password','logout');
     }
 }

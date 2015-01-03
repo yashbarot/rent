@@ -13,20 +13,16 @@
 		echo $this->Html->meta('icon');
 	?>
 
-  	<!-- Latest compiled and minified CSS -->
-  	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
-
-  	<!-- Latest compiled and minified JavaScript -->
-  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    
   <?php
     echo $this->fetch('meta');
     echo $this->fetch('css');
     echo $this->Html->css('style.css');
     echo $this->Html->css('bootstrap.min.css');
-    echo $this->fetch('script');  
+    echo $this->fetch('script'); 
+    echo $this->Html->script('jquery.min.js'); 
+    echo $this->Html->script('bootstrap.min.js'); 
+    echo $this->Html->script('scripts.js'); 
+
   ?>
   </head>
   <body>

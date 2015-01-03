@@ -26,6 +26,11 @@ class PropertiesController extends AppController {
 		$this->set('properties', $this->Paginator->paginate());
 	}
 
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index');
+    }
+
 /**
  * view method
  *
